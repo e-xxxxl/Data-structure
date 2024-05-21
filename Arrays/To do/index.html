@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #arr{
+        border-radius: 10px;        
+    }
+</style>
+<body>
+    <input id="arr" type="text">
+    <button onclick="add()">ADD</button>
+    <div id="disp"></div>
+
+
+    <script>
+        const items =[]
+        function add(){
+            if (arr.value == ''){
+            alert("NOPE")
+        }
+        else {
+            items.push(arr.value)
+            console.log(items)
+            arr.value = ""
+            disp.innerHTML = ""
+            for(i = 0; i< items.length; i++){
+                disp.innerHTML+= `<p>${i+1}. ${items[i]}</p>`
+            }
+            
+        }
+            
+        }
+    </script>
+</body>
+</html>
